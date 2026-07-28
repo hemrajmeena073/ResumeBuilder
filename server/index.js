@@ -12,8 +12,12 @@ connect();
 app.use(express.json());
 app.use(
 	cors({
-		origin:["http://localhost:5173", "http://localhost:3000"],
-		credentials:true,
+		origin: [
+			"http://localhost:5173",
+			"http://localhost:3000",
+			"https://your-app.vercel.app" // <-- replace with your actual Vercel URL
+		],
+		credentials: true,
 	})
 )
 
